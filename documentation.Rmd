@@ -1,0 +1,57 @@
+---
+title: 'Documentation for this shiny app.'
+author: "fss14142@gmail.com"
+date: "November 2014"
+output: html_document
+---
+
+### Introduction. ###
+
+This is my Shiny app for the *Developing Data Products* course in the 
+[Johns Hopkins Coursera Data Science 
+Specialization](https://www.coursera.org/specialization/jhudatascience/1?utm_medium=listingPage).
+
+Bird migration is one of nature's most amazing phenomena. As such, it attracts not only the interest of ornithologists, but also of birdwatchers around the world.  Thus, the study of bird migration benefits from the cooperation between professional scientists and amateur birders. In 2002 the [Cornell Lab of Ornithology](http://birds.cornell.edu/) created [eBird](http://ebird.org/), an online database which provides information about bird species populations. The data is provided by thousands of birders (not just in the US, but in many other countries as well), using an easy web interface. This turns eBird into one of the largest projects of the so called *Citizen Science*. The eBird services include an [API](https://confluence.cornell.edu/display/CLOISAPI/eBirdAPIs) which I have used for this project.   
+
+Let me emphasize that this application is really simple and, in fact, the information displayed by this app can be obtained directly from the eBird website (and in a much better way!).  This application is just a proof-of-concept to show that R and Shiny can be used to programatically access the eBird data, and to fulfill the requirements of the *Developing Data Products* course project.    
+
+The eBird API can be used to obtain information about thousands of bird species, across many countries. However, for the course puroposes, I have decided to limit the application to the analysis of data about a few relevant and well known migratory species in the United States: 
+
+1. The [Snow Goose](http://en.wikipedia.org/wiki/Snow_goose). 
+2. The [Sandhill Crane](http://en.wikipedia.org/wiki/Sandhill_crane).
+3. The [Common Goldeneye](http://en.wikipedia.org/wiki/Common_goldeneye).
+4. The [Mallard](http://en.wikipedia.org/wiki/Mallard).
+
+###  How to use the application. ###
+
+Initially, the *State Summary and Map* tab in the main panel of the application displays a map of a particular state, with markers indicating the bird observations for the last seven days. Clicking on any marker will bring to front a popup with the following information about the observation   
+
+ - Name of the observation site.
+ - Coordinates (latitude, longitude).
+ - Number of birds observed.
+ - Date of the observation.
+  
+ The left input panel of the application lets the user choose:
+ 
+ - The particular state for which the information is displayed. The state is selected using a drop down menu with the list of the states. 
+ - The bird species. 
+ - The number of days to include: if 5 days are selected, then the information displayed corresponds to observations made in the last five days. The eBird API only provides information for the last 30 days, and  the user can use a slider to select the number of days.
+ Whenever the user changes the state or the number of days, the information in the main panel is updated accordingly.
+ 
+### References and GitHub info. ###
+
+
+
+The following tools have been used in this application:
+
+- [Shiny](http://shiny.rstudio.com/)
+- [rCharts](http://rcharts.io/)
+- [eBird API](https://confluence.cornell.edu/display/CLOISAPI/eBirdAPIs) 
+
+Citation info for eBird: eBird. 2012. eBird: An online database of bird distribution and abundance [web application]. eBird, Cornell Lab of Ornithology, Ithaca, New York. Available: http://www.ebird.org.
+
+All the bird images are taken from the corresponding Wikipedia pages for each species (see links above).
+
+
+
+

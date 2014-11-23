@@ -40,7 +40,8 @@ Initially, the *State Summary and Map* tab in the main panel of the application 
  
 ### References and GitHub info. ###
 
-
+The GitHub repository for this app can be found at:  
+[https://github.com/fss14142/DevelopingDataProductsProject](https://github.com/fss14142/DevelopingDataProductsProject)
 
 The following tools have been used in this application:
 
